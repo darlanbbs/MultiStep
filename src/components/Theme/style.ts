@@ -6,6 +6,8 @@ export const Container = styled.div`
   background-color: #fff;
   color: #000;
   border-radius: 20px;
+  width: 75%;
+  max-height: 70vh;
   width: 52vw;
   min-height: 62vh;
   display: flex;
@@ -14,7 +16,6 @@ export const Container = styled.div`
   @media ${device.laptop} {
     justify-content: center;
     border-radius: 10px;
-    height:70vh;
     width: 70vw;
     margin-top:90px;
   }
@@ -22,14 +23,14 @@ export const Container = styled.div`
     height:95vh;
     width: 85vw;
   }
+
 `;
 
 export const Area = styled.div`
-  margin:0 auto;
-  height:70vh
+  height:70vh;
   display: flex;
+  justify-content: center;
   align-items: center;
-
   `;
 
 export const Steps = styled.div`
@@ -57,14 +58,10 @@ export const Sidebar = styled.div`
 export const Page = styled.div`
   display: flex;
   align-items: center;
-  width: 40vw;
-  height:70vh;
+  justify-content: center;
+  width: 35vw;
+  height:100%;
   flex-direction: column;
-  @media ${device.laptop} {
-    
-
-
-   }
   `;
   
 export const step = styled.div`
@@ -88,7 +85,7 @@ display:none;
   position: absolute;
   top:0px;
   height: 20%;
-  width:100vw;
+  width:100%;
     background: url(/bg-sidebar-mobile.svg) ;
     background-size: 100%;
   }
