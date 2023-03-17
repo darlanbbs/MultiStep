@@ -39,7 +39,7 @@ const initialData: Datas = {
   name: "",
   email: "",
   number: 0,
-  price: "",
+  price: "$12/mo",
   plan: "Advanced",
   type: "Monthly",
 
