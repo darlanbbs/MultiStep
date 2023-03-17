@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 //style
-import * as C from "./style";
+import * as C from "./styles";
 import * as D from "./../GlobalItens/StyleGlobalForm";
 import Theme from "../../components/Theme/Index";
 
@@ -17,19 +17,22 @@ import Title from "../GlobalItens/Title";
 const Page4 = () => {
 
   const navigate = useNavigate();
-  const { dispatch, state } = useForm();
+  const { dispatch, state,formData } = useForm();
 
   useEffect(() => {
-    if (state.type !== undefined) {
+    if (formData.data.option1 == false && formData.data.option2 == false && formData.data.option3 == false) {
+      alert('Choose an addon for the next step')
+      navigate('/services')
+
+    }else{
       dispatch({
         type: formActions.setCurrentStep,
         payload: 4,
       });
-    } else {
-      navigate("/");
     }
+    
   }, []);
-
+console.log(formData.data)
   return (
     <Theme>
       <C.Container>
@@ -50,3 +53,4 @@ const Page4 = () => {
 };
 
 export default Page4;
+
