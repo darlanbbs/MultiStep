@@ -18,9 +18,7 @@ const Page5 = () => {
 
        
       });
-      setTimeout(() => {
-        location.reload();
-      }, 5000);
+      
     }else{
       navigate('/')
     }
